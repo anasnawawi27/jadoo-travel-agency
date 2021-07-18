@@ -11,6 +11,20 @@ body {
   background-repeat: no-repeat;
 }
 
+.bg-header .navbar-nav .nav-item {
+  margin-left: 20px;
+}
+
+.bg-header .navbar-nav .nav-item a {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  font-weight: 500;
+}
+
+.bg-header .navbar-nav .nav-item .btn-outline-dark:hover {
+  color: #ffff;
+}
+
 .header-title-right p {
   color: #DF6951;
 }
@@ -278,7 +292,7 @@ body {
   border-radius: 10px;
 }
 
-.subscribe .input-subscribe .focus-visible {
+.subscribe .input-subscribe input:focus {
   border: none !important;
   outline: none !important;
 }
@@ -350,5 +364,149 @@ footer .get-it-on .google-play, footer .get-it-on .app-store {
   height: 35px;
   background: black;
   line-height: 35px;
+}
+
+.testimoni h3 {
+  font-weight: bold;
+  font-family: 'Volkhov';
+  font-size: 50px;
+}
+
+.testimoni .owl-stage-outer {
+  position: relative;
+  padding: 20px;
+}
+
+.testimoni .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  height: 300px;
+}
+
+.testimoni .card {
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 30px 40px rgba(160, 159, 159, 0.1);
+          box-shadow: 0px 30px 40px rgba(160, 159, 159, 0.1);
+  position: absolute;
+  -webkit-animation: animate 15s linear infinite;
+          animation: animate 15s linear infinite;
+  -webkit-animation-delay: calc(3s * var(--delay));
+          animation-delay: calc(3s * var(--delay));
+  pointer-events: none;
+  opacity: 0;
+}
+
+.testimoni .card:last-child {
+  -webkit-animation-delay: calc(-3s * var(--delay));
+          animation-delay: calc(-3s * var(--delay));
+}
+
+.testimoni .card p {
+  color: #5E6282;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+}
+
+.testimoni .card h6 {
+  margin-top: 5px;
+  font-size: 18px;
+  color: #5E6282;
+  font-weight: 600;
+}
+
+.testimoni .card span {
+  color: #5E6282;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.testimoni img {
+  top: -20px;
+  left: -20px;
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%) scale(0.5);
+            transform: translateY(100%) scale(0.5);
+    top: -100px;
+    z-index: -300;
+  }
+  5%, 20% {
+    opacity: 0.5;
+    -webkit-transform: translateY(100%) scale(0.7);
+            transform: translateY(100%) scale(0.7);
+    top: -120px;
+    z-index: -200;
+  }
+  25%, 40% {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+  }
+  45% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%) scale(0.7);
+            transform: translateY(-30%) scale(0.7);
+    z-index: -400;
+  }
+  /* 65%,100%{
+      opacity: 0;
+      transform: translateY(-100%) scale(0.5);
+    } */
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%) scale(0.5);
+            transform: translateY(100%) scale(0.5);
+    top: -100px;
+    z-index: -300;
+  }
+  5%, 20% {
+    opacity: 0.5;
+    -webkit-transform: translateY(100%) scale(0.7);
+            transform: translateY(100%) scale(0.7);
+    top: -120px;
+    z-index: -200;
+  }
+  25%, 40% {
+    opacity: 1;
+    pointer-events: auto;
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+  }
+  45% {
+    opacity: 0;
+    -webkit-transform: translateY(-30%) scale(0.7);
+            transform: translateY(-30%) scale(0.7);
+    z-index: -400;
+  }
+  /* 65%,100%{
+      opacity: 0;
+      transform: translateY(-100%) scale(0.5);
+    } */
 }
 /*# sourceMappingURL=style.css.map */
